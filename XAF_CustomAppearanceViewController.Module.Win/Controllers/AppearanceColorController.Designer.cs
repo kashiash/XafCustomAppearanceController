@@ -1,4 +1,4 @@
-﻿namespace XAF_CustomAppearanceViewController.Module.Win
+﻿namespace AppearanceColorController.Module.Win
 {
 	partial class AppearanceColorController
 	{

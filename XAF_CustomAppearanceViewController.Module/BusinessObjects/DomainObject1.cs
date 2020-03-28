@@ -1,18 +1,11 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="DomainObject1.cs">
-//		Author: Ronald van der Does
-// 		Copyright 2015-2020(c) Zero Boundaries Technology.
-//		Modified 2020/02/04 11:46
-//		All rights reserved.
-// </copyright>
-//-----------------------------------------------------------------------
+﻿
 using System;
 using System.Linq;
 using DevExpress.Xpo;
 using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using XAF_CustomAppearanceViewController.Module.BusinessObjects.Interface;
-
+using DevExpress.ExpressApp.StateMachine.Xpo;
 
 namespace XAF_CustomAppearanceViewController.Module.BusinessObjects
 {
@@ -23,7 +16,7 @@ namespace XAF_CustomAppearanceViewController.Module.BusinessObjects
 		{
 		}
 
-
+	//	public XpoStateAppearance aaa { get; set; }
 		public Risk CategoryA
 		{
 			get

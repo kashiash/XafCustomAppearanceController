@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Globalization;
 using DevExpress.Xpo.Metadata;
 
-namespace XAF_CustomAppearanceViewController.Module.BusinessObjects
+namespace JK.XAF.Module.BusinessObjects
 {
 	public class ColorValueConverter : ValueConverter
 	{

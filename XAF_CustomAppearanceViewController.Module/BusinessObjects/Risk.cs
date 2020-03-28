@@ -40,18 +40,6 @@ namespace XAF_CustomAppearanceViewController.Module.BusinessObjects
 			}
 		}
 
-		public String Description
-		{
-			get
-			{
-				return GetPropertyValue<String>(nameof(Description));
-			}
-			set
-			{
-				SetPropertyValue<String>(nameof(Description), value);
-			}
-		}
-
 		[Index(3)]
 		[ValueConverter(typeof(ColorValueConverter))]
 		public Color ForeColor
@@ -65,6 +53,20 @@ namespace XAF_CustomAppearanceViewController.Module.BusinessObjects
 				SetPropertyValue<Color>(nameof(ForeColor), value);
 			}
 		}
+
+		public String Description
+		{
+			get
+			{
+				return GetPropertyValue<String>(nameof(Description));
+			}
+			set
+			{
+				SetPropertyValue<String>(nameof(Description), value);
+			}
+		}
+
+
 
 		public String Fullname
 		{
@@ -101,6 +103,15 @@ namespace XAF_CustomAppearanceViewController.Module.BusinessObjects
 			}
 		}
 
+		//public FontStyle? FontStyle { get; set; }
+
+		FontStyle? fontStyle;
+
+		public FontStyle? FontStyle
+		{
+			get => fontStyle;
+			set => SetPropertyValue(nameof(FontStyle), ref fontStyle, value);
+		}
 
 		public override void AfterConstruction()
 		{
