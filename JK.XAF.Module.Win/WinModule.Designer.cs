@@ -26,7 +26,6 @@
             // 
             // XAFWindowsFormsModule
             // 
-            this.RequiredModuleTypes.Add(typeof(XAF_CustomAppearanceViewController.Module.XAF_CustomAppearanceViewControllerModule));
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Win.SystemModule.SystemWindowsFormsModule));
 			this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Validation.Win.ValidationWindowsFormsModule));
         }

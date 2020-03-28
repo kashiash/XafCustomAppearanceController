@@ -167,11 +167,13 @@ namespace MainDemo.Module.DatabaseUpdate {
                 managerPosition.Title = "Manager";
             }
 
-            Department devDepartment = ObjectSpace.FindObject<Department>(CriteriaOperator.Parse("Title == 'Development Department'"));
+            Department devDepartment = ObjectSpace.FindObject<Department>(CriteriaOperator.Parse("Title == 'DDevelopment Department'"));
             if(devDepartment == null) {
                 devDepartment = ObjectSpace.CreateObject<Department>();
-                devDepartment.Title = "Development Department";
+                devDepartment.Title = "DDevelopment Department";
                 devDepartment.Office = "205";
+                devDepartment.ForeColor = Color.Red;
+                devDepartment.FontStyle = FontStyle.Bold;
                 devDepartment.Positions.Add(developerPosition);
                 devDepartment.Positions.Add(managerPosition);
             }
@@ -180,6 +182,7 @@ namespace MainDemo.Module.DatabaseUpdate {
                 seoDepartment = ObjectSpace.CreateObject<Department>();
                 seoDepartment.Title = "SEO";
                 seoDepartment.Office = "703";
+                devDepartment.FontStyle = FontStyle.Bold;
                 seoDepartment.Positions.Add(developerPosition);
                 seoDepartment.Positions.Add(managerPosition);
             }
@@ -228,6 +231,7 @@ namespace MainDemo.Module.DatabaseUpdate {
                         if(department == null) {
                             department = ObjectSpace.CreateObject<Department>();
                             department.Title = departmentTitle;
+                            devDepartment.FontStyle = FontStyle.Italic;
                             Random rnd = new Random();
                             department.Office = string.Format("{0}0{0}", rnd.Next(1, 7), rnd.Next(9));
                         }

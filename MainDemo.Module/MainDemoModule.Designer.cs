@@ -68,6 +68,7 @@ namespace MainDemo.Module {
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.ReportsV2.ReportsModuleV2));
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.PivotChart.PivotChartModuleBase));
             this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Office.OfficeModule));
+            this.RequiredModuleTypes.Add(typeof(JK.XAF.Module.ModuleModule));
 
         }
 

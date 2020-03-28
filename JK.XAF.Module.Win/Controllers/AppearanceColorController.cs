@@ -65,7 +65,7 @@ namespace JK.XAF.Module.Win
                         {
                             formattedItem.BackColor = ((IColor)prop.PropertyValue).BackColor;
                             formattedItem.FontColor = ((IColor)prop.PropertyValue).ForeColor;
-                            formattedItem.FontStyle = ((IColor)prop.PropertyValue).FontStyle ?? 0;
+                            formattedItem.FontStyle = ((IColor)prop.PropertyValue).FontStyle ;
                         }
 
                         else

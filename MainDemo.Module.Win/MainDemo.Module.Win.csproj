@@ -64,6 +64,7 @@
     <Reference Include="DevExpress.Data.v19.2">
       <Private>False</Private>
     </Reference>
+    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.Office.Win.v19.2">
       <Private>False</Private>
     </Reference>
@@ -230,6 +231,7 @@
       <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
       <Subtype>Designer</Subtype>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JK.XAF.Module.Win\JK.XAF.Module.Win.csproj">

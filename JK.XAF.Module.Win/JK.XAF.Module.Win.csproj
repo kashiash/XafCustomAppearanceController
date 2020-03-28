@@ -141,6 +141,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AppearanceColorController.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WinModule.cs">
       <SubType>Component</SubType>
@@ -168,10 +171,9 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XAF_CustomAppearanceViewController.Module\XAF_CustomAppearanceViewController.Module.csproj">
-      <Project>{5F15837D-D1E5-44DC-92F0-4F2EBE9C3F8D}</Project>
-      <Name>XAF_CustomAppearanceViewController.Module</Name>
-      <Private>True</Private>
+    <ProjectReference Include="..\JK.XAF.Module\JK.XAF.Module.csproj">
+      <Project>{BD273264-8C74-4FB9-B3C5-95D5DBE51C91}</Project>
+      <Name>JK.XAF.Module</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
