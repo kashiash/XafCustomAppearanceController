@@ -8,6 +8,6 @@ namespace JK.XAF.Module.BusinessObjects
         Color BackColor { get; set; }
         Color ForeColor { get; set; }
 
-        FontStyle? FontStyle { get; set; }
+        FontStyle FontStyle { get; set; }
     }
 }
