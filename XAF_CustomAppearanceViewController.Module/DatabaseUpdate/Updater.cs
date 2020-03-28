@@ -36,10 +36,10 @@ namespace XAF_CustomAppearanceViewController.Module.DatabaseUpdate
 			//    theObject.Name = name;
 			//}
 
-			Risk R10 = InsertRisk("Level: Green  10", 10, Color.Green);
-			Risk R20 = InsertRisk("Level: Yellow 20", 20, Color.Yellow);
-			Risk R30 = InsertRisk("Level: Orange 30", 30, Color.Orange);
-			Risk R40 = InsertRisk("Level: Red    40", 40, Color.Red);
+			Risk R10 = InsertRisk("Level: Green  10", 10, Color.Green, FontStyle.Bold);
+			Risk R20 = InsertRisk("Level: Yellow 20", 20, Color.Yellow, FontStyle.Bold);
+			Risk R30 = InsertRisk("Level: Orange 30", 30, Color.Orange, FontStyle.Underline);
+			Risk R40 = InsertRisk("Level: Red    40", 40, Color.Red, FontStyle.Italic);
 
 			InsertDomainObject1("Project 1", R10,R20);
 			InsertDomainObject1("Project 2", R30,R10);
@@ -73,7 +73,7 @@ namespace XAF_CustomAppearanceViewController.Module.DatabaseUpdate
 
 
 		}
-		Risk InsertRisk(String Name, int Level, Color color)
+		Risk InsertRisk(String Name, int Level, Color color, FontStyle fontStyle)
 		{
 			Risk risk = ObjectSpace.FindObject<Risk>(new BinaryOperator(nameof(Name), Name));
 
@@ -82,7 +82,8 @@ namespace XAF_CustomAppearanceViewController.Module.DatabaseUpdate
 				risk = ObjectSpace.CreateObject<Risk>();
 				risk.Name = Name;
 				risk.Level = Level;
-				risk.BackColor = color;
+				risk.ForeColor = color;
+				risk.FontStyle = fontStyle;
 			}
 
 			return risk;

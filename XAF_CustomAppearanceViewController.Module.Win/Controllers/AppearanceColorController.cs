@@ -1,11 +1,4 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="AppearanceController_RiskRating.cs">
-//		Author: Ronald van der Does
-// 		Copyright 2015-2020(c) Zero Boundaries Technology.
-//		Modified 2020/02/04 11:46
-//		All rights reserved.
-// </copyright>
-//-----------------------------------------------------------------------
+﻿
 using System;
 using System.Linq;
 using System.Diagnostics;

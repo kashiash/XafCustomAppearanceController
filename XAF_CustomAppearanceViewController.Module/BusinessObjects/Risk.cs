@@ -13,7 +13,7 @@ using DevExpress.Xpo;
 using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
-
+using JK.XAF.Module.BusinessObjects;
 
 namespace XAF_CustomAppearanceViewController.Module.BusinessObjects
 {
@@ -53,6 +53,16 @@ namespace XAF_CustomAppearanceViewController.Module.BusinessObjects
 				SetPropertyValue<Color>(nameof(ForeColor), value);
 			}
 		}
+
+		FontStyle? fontStyle;
+		[Index(4)]
+		public FontStyle? FontStyle
+		{
+			get => fontStyle;
+			set => SetPropertyValue(nameof(FontStyle), ref fontStyle, value);
+		}
+
+
 
 		public String Description
 		{
@@ -105,13 +115,7 @@ namespace XAF_CustomAppearanceViewController.Module.BusinessObjects
 
 		//public FontStyle? FontStyle { get; set; }
 
-		FontStyle? fontStyle;
 
-		public FontStyle? FontStyle
-		{
-			get => fontStyle;
-			set => SetPropertyValue(nameof(FontStyle), ref fontStyle, value);
-		}
 
 		public override void AfterConstruction()
 		{
