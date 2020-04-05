@@ -74,6 +74,7 @@
     <Compile Include="BusinessObjects\ColorValueConverter.cs" />
     <Compile Include="BusinessObjects\FilteringCriterion.cs" />
     <Compile Include="BusinessObjects\IColor.cs" />
+    <Compile Include="BusinessObjects\DocumentNumberGenerator.cs" />
     <Compile Include="Controllers\CriteriaController.cs" />
     <Compile Include="Controllers\EventsObjectViewController.cs" />
     <Compile Include="Controllers\FilteringCriterionDetailController.cs" />
@@ -88,6 +89,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+    <EmbeddedResource Include="Module.resx">
+      <DependentUpon>Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BusinessObjects\ReadMe.txt" />

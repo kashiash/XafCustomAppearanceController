@@ -71,7 +71,7 @@
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>false</Prefer32Bit>
-    <LangVersion>6</LangVersion>
+    <LangVersion>7.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -96,7 +96,7 @@
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>false</Prefer32Bit>
-    <LangVersion>6</LangVersion>
+    <LangVersion>7.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -108,9 +108,12 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>false</Prefer32Bit>
-    <LangVersion>6</LangVersion>
+    <LangVersion>7.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bogus, Version=29.0.1.0, Culture=neutral, PublicKeyToken=fa1bb3f3f218129a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bogus.29.0.1\lib\net40\Bogus.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Data.v19.2">
       <Private>False</Private>
     </Reference>
@@ -180,6 +183,7 @@
     <Reference Include="DevExpress.Xpo.v19.2">
       <Private>False</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System">
       <Name>System</Name>
       <Private>False</Private>
@@ -213,9 +217,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessObjects\Department.cs" />
+    <Compile Include="BusinessObjects\Faktura.cs" />
+    <Compile Include="BusinessObjects\Klient.cs" />
+    <Compile Include="BusinessObjects\Kontakt.cs" />
+    <Compile Include="BusinessObjects\Kraj.cs" />
     <Compile Include="BusinessObjects\Location.cs" />
     <Compile Include="BusinessObjects\PortfolioFileData.cs" />
     <Compile Include="BusinessObjects\Position.cs" />
+    <Compile Include="BusinessObjects\PozycjaFaktury.cs" />
+    <Compile Include="BusinessObjects\Produkt.cs" />
+    <Compile Include="BusinessObjects\Spotkanie.cs" />
+    <Compile Include="BusinessObjects\Stanowisko.cs" />
+    <Compile Include="BusinessObjects\StawaVAT.cs" />
+    <Compile Include="BusinessObjects\Waluta.cs" />
+    <Compile Include="BusinessObjects\Wplata.cs" />
     <Compile Include="Controllers\ClearContactTasksController.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -329,6 +344,9 @@
       <Project>{bd273264-8c74-4fb9-b3c5-95d5dbe51c91}</Project>
       <Name>JK.XAF.Module</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

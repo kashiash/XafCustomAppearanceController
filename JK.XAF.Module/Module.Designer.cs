@@ -23,10 +23,14 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			// 
-			// ModuleModule
-			// 
-			this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.SystemModule.SystemModule));
+            // 
+            // ModuleModule
+            // 
+            this.AdditionalExportedTypes.Add(typeof(DevExpress.Persistent.BaseImpl.OidGenerator));
+            this.AdditionalExportedTypes.Add(typeof(DevExpress.Xpo.XPBaseObject));
+            this.AdditionalExportedTypes.Add(typeof(DevExpress.Xpo.PersistentBase));
+            this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.SystemModule.SystemModule));
+
 		}
 
 		#endregion
